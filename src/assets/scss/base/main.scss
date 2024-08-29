@@ -62,12 +62,12 @@ button {
   cursor: pointer;
 }
 // ----------
-.container{
+.container {
   margin: 0 auto;
   padding: 0 var(--container-padding);
   max-width: calc(var(--container-width) + (var(--container-padding) * 2));
-} 
-.hidden{
+}
+.hidden {
   font-size: 0;
   opacity: 0;
   visibility: hidden;

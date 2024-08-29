@@ -68,11 +68,11 @@
     }
   }
 
-&__left {
-  @include mini-desktop {
-    max-width: 617px;
+  &__left {
+    @include mini-desktop {
+      max-width: 617px;
+    }
   }
-}
 
   &__title {
     margin-bottom: 114px;
