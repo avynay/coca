@@ -1,4 +1,6 @@
 :root {
+    // transitions
+    --transition: 0.2s ease-in-out;
   // neutral colors
   --neutral-color-10: #fff;
   --neutral-color-20: #f5f5f5;
@@ -19,18 +21,23 @@
   // container
   --container-padding: 15px;
   --container-width: 1200px;
-
-  @include mobile {
-    --container-width: 480px;
-  }
-  // transitions
-  --transition: 0.2s ease-in-out;
-// z-index
+  // overview colors
+  --overview-bg-color:#1d1e25;
+  // z-index
 --z-index-0:-1;
 --z-index-1:1;
 --z-index-2:2;
 --z-index-3:3;
 --z-index-4:4;
+  @include mini-desktop {
+    --container-width: 1000px;
+  }
+  @include tablet {
+    --container-width: 860px;
+  }
+  @include mobile {
+    --container-width: 480px;
+  }
 }
 
 [data-theme='dark'] {
@@ -43,4 +50,6 @@
     // logo-colors
   --logo-color-text: #fff;
   --logo-color-circle: #343542;
+    // overview colors
+    --overview-bg-color:#18181d;
 }
