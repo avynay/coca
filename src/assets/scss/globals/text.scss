@@ -18,6 +18,18 @@
   }
   &-h3 {
     font-size: 40px;
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include mobile{
+      font-size: 26px;
+      }
+
+    @include small-mobile{
+      font-size: 24px;
+      }
   }
   &-h4 {
     font-size: 36px;

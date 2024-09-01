@@ -1,5 +1,5 @@
 .features {
-  padding: 100px 0 94px;
+  padding: 160px 0 94px;
 
   @include mobile {
     padding: 60px 0 64px;
@@ -69,10 +69,10 @@
 
       &-img {
         @include small-mobile {
-        width: 65px;
+          width: 65px;
         }
       }
-      
+
       &-title {
         margin-bottom: 6px;
         font-weight: 500;
@@ -139,12 +139,11 @@
     max-width: 360px;
     font-weight: 500;
     line-height: 178%;
-    color: #7e8492;
+    color: var(--neutral-color-150);
 
     @include mini-desktop {
       max-width: 700px;
     }
-
   }
 
   &__item {
@@ -162,12 +161,12 @@
       margin-bottom: 32px;
 
       @include mobile {
-      margin-bottom: 22px;
+        margin-bottom: 22px;
       }
     }
 
     &::before {
-      content: "";
+      content: '';
       display: inline-block;
       background: url('../icons/features-tick-icon.svg');
       margin-right: 19px;
