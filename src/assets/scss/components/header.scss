@@ -61,7 +61,7 @@
     background-color: var(--neutral-color-130);
     transform: translateY(8px);
     transition: background-color var(--transition);
-    cursor: pointer;
+
     &::before {
       content: '';
       position: absolute;
@@ -76,6 +76,7 @@
         left var(--transition),
         background-color var(--transition);
     }
+
     &-text {
       position: absolute;
       top: -24px;
@@ -90,9 +91,11 @@
         font-size: 20px;
       }
     }
+
     &-checkbox {
       appearance: none;
     }
+
     &:has(&-checkbox:checked) {
       background-color: var(--neutral-color-60);
       &::before {
@@ -102,6 +105,7 @@
     }
   }
 }
+
 .nav {
   &__list {
     @include flex-align-center;

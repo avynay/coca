@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation } from 'swiper/modules';
-import { EffectFade } from 'swiper/modules';
+import 'swiper/css/effect-fade';
+import { Navigation, EffectFade } from 'swiper/modules';
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
@@ -28,7 +28,7 @@ export const useTestimonialsSlider = () => {
     container: '.testimonials__slider',
     effect: 'fade',
     slidesPerView: 1,
-    spaceBetween: 180,
+    spaceBetween: 30,
     loop: true,
     grabCursor: true,
     navigation: {

@@ -63,7 +63,7 @@
       border-radius: 16px;
       padding: 10px;
       color: var(--neutral-color-100);
-      transition: opacity var(--transition);
+      transition: opacity var(--transition),;
 
       &:hover {
         opacity: 0.85;
