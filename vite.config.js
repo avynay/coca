@@ -15,6 +15,7 @@ export default defineConfig({
       input: {
         main: './src/index.html',
         pricing: './scr/pricing.html',
+        contact: './scr/contact.html',
       },
     },
   },
