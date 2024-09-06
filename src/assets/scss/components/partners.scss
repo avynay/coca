@@ -1,8 +1,12 @@
 .partners {
   padding: 108px 0;
 
-  @include mobile {
-    padding: 76px 0;
+  @include mini-desktop {
+    padding: 48px 0;
+  }
+
+  @include tablet {
+    padding: 0;
   }
 
   &__container {
@@ -41,16 +45,41 @@
     }
   }
 
-  &__list {
-    @include flex-all-center;
-    gap: 10px 30px;
-    flex-wrap: wrap;
+  &__slider {
+    margin-right: 0;
+    margin-left: 0;
 
-    @include mobile {
-      gap: 10px;
+    @include small-tablet {
+      width: 100%;
     }
-  
   }
+
+  &__list {
+    display: grid;
+    gap: 10px 30px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include mini-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      display: flex;
+      gap: 0;
+    }
+  }
+
+  .swiper-wrapper {
+    display: grid;
+
+    @include small-tablet {
+      display: flex;
+    }
+    }
 
   &__item {
     @include flex-all-center;

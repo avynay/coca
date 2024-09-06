@@ -1,7 +1,57 @@
 import Swiper from 'swiper';
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
-import { Navigation, EffectFade } from 'swiper/modules';
+import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
+
+export const usePartnersSlider = () => {
+  let partnersSlider = null;
+
+  function checkWidth() {
+    if (window.innerWidth <= 768) {
+      if (!partnersSlider) {
+        initSwiper();
+      }
+    } else {
+      if (partnersSlider) {
+        destroySwiper();
+      }
+    }
+  }
+
+  function initSwiper() {
+    partnersSlider = new Swiper('.partners__slider', {
+      modules: [Autoplay],
+      speed: 1000,
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        451: {
+          slidesPerView: 2,
+        },
+        651: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+      },
+    });
+  }
+
+  function destroySwiper() {
+    if (partnersSlider) {
+      partnersSlider.destroy(true, true);
+      partnersSlider = null;
+    }
+  }
+
+  window.addEventListener('resize', checkWidth);
+  checkWidth();
+};
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
