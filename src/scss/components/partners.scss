@@ -6,7 +6,7 @@
   }
 
   @include tablet {
-    padding: 0;
+    padding: 30px;
   }
 
   &__container {
@@ -82,10 +82,16 @@
     }
 
   &__item {
-    @include flex-all-center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     border-radius: 16px;
     width: 160px;
     height: 90px;
     background-color: #fff;
+
+    &.swiper-slide {
+      height: 90px;
+    }
   }
 }
