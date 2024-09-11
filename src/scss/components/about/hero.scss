@@ -1,0 +1,215 @@
+.hero {
+  padding: 105px 0 160px;
+
+  @include small-tablet {
+    padding: 65px 0 85px;
+  }
+
+  @include mobile {
+    padding: 45px 0 0;
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 78px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 48px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__info {
+    @include flex-all-between;
+    gap: 60px 30px;
+    flex-wrap: wrap;
+    margin-bottom: 135px;
+
+    @include tablet {
+      margin-bottom: 65px;
+      justify-content: center;
+    }
+
+    @include small-mobile {
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    &-descr {
+      max-width: 780px;
+
+      @include tablet {
+        text-align: center;
+      }
+
+      & br {
+        @include small-tablet {
+          display: none;
+        }
+      }
+    }
+
+    &-link {
+      @include flex-all-center;
+      position: relative;
+      margin-right: 44px;
+      width: 127px;
+      height: 126px;
+
+      @include tablet {
+        margin-right: 0;
+      }
+
+      @include mobile {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+      }
+
+      &-arrow {
+        @include small-mobile {
+          width: 55%;
+        }
+      }
+
+      &-text {
+        position: absolute;
+        inset: 0;
+      }
+    }
+  }
+
+  &__slider {
+    &-btns {
+      @include flex-all-between;
+      margin-bottom: 30px;
+      padding: 0 30px;
+      white-space: nowrap;
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    &-prev,
+    &-next {
+      cursor: pointer;
+      border: 1.5px solid var(--neutral-color-100);
+      border-radius: 16px;
+      padding: 10px;
+      color: var(--neutral-color-100);
+      transition: opacity var(--transition);
+
+      &:hover {
+        opacity: 0.85;
+        background: linear-gradient(to right, #35238421, #e90b8d21);
+
+        @include mobile {
+          background: transparent;
+        }
+      }
+
+      &:active {
+        opacity: 0.85;
+        box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.1) inset;
+
+        @include mobile {
+          box-shadow: 0px -7px rgba(0, 0, 0, 0.1) inset;
+        }
+      }
+
+      @include mobile {
+        border: none;
+        border-top: 1px solid var(--neutral-color-100);
+        border-bottom: 1px solid var(--neutral-color-100);
+        border-radius: 0;
+        padding: 10px 5px;
+      }
+    }
+  }
+
+  &__item {
+    @include mobile {
+      text-align: center;
+    }
+
+    &-img {
+      margin-bottom: 24px;
+
+      @include small-tablet {
+        margin-bottom: 12px;
+      }
+
+      @include mobile {
+        margin-bottom: 0;
+      }
+
+      &--height-460 {
+        height: 460px;
+        margin-bottom: 0;
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--neutral-color-100);
+
+      @include small-tablet {
+        margin-bottom: 4px;
+      }
+
+      @include mobile {
+        margin-bottom: 2px;
+      }
+    }
+
+    &-descr {
+      margin-bottom: 32px;
+      font-weight: 500;
+      line-height: 1.78;
+      color: var(--neutral-color-150);
+
+      @include small-tablet {
+        margin-bottom: 16px;
+      }
+
+      @include mobile {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-btn {
+      display: inline-block;
+      padding: 16px 32px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--neutral-color-10);
+      background-color: var(--neutral-color-100);
+    }
+  }
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  @include small-tablet {
+    opacity: 0.5;
+  }
+}
+
+.body[data-theme='light'] .hero__info-link {
+  filter: invert(100%);
+}

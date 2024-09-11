@@ -20,3 +20,17 @@ export const useAccordion = () => {
     });
   });
 };
+export const priceAccordion = () => {
+  const details = document.querySelectorAll('.faq__accordion');
+  // добавить к каждому клику события клика
+  [...details].forEach((targetDetail) => {
+    targetDetail.addEventListener('click', () => {
+      // закрывать всех кроме кликнутого
+      details.forEach((detail) => {
+        if (detail !== targetDetail) {
+          detail.removeAttribute('open');
+        }
+      });
+    });
+  });
+};

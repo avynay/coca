@@ -1,14 +1,16 @@
-import '/scss/pricing.scss';
+import '/scss/about.scss';
 
 // components
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
 import { useAccordion } from './components/accordion.js';
-import { priceAccordion } from './components/accordion.js';
-import { usePriceSwitcher } from './components/pricing/priceSwitch.js';
+import {
+  useAboutHeroSlider,
+  useAboutTeamSlider,
+} from './components/home/slider.js';
 
 useTheme();
 useBurger();
 useAccordion();
-usePriceSwitcher();
-priceAccordion();
+useAboutHeroSlider();
+useAboutTeamSlider();
