@@ -1,0 +1,214 @@
+.content {
+  padding: 32px 0 160px;
+
+  @include small-tablet {
+    padding-bottom: 80px;
+  }
+
+  @include mobile {
+    padding: 0 0 40px;
+  }
+
+  &__container {
+    max-width: calc(940px + var(--container-padding) * 2);
+
+    @include small-tablet {
+      max-width: var(--container-width);
+      padding: var(--container-padding);
+    }
+  }
+
+  &__head {
+    @include flex-justify-between;
+    margin-bottom: 24px;
+    align-items: flex-end;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &-time {
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__author {
+    @include flex-align-center;
+    gap: 24px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    &-img {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &-name {
+      margin-bottom: 4px;
+      font-weight: 600;
+      line-height: 144%;
+      color: var(--neutral-color-100);
+    }
+
+    &-profession {
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__post {
+    &-img {
+      margin-bottom: 80px;
+
+      @include small-tablet {
+        margin-bottom: 40px;
+      }
+
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 56px;
+      font-weight: 400;
+      line-height: 178%;
+      color: var(--neutral-color-100);
+
+      @include mobile {
+        margin-bottom: 45px;
+      }
+    }
+
+    &-subtitle {
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: var(--neutral-color-100);
+    }
+  }
+
+  &__creator {
+    @include flex-justify-between;
+    max-width: 893px;
+    align-items: flex-start;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    @include mobile {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &-info {
+      max-width: 645px;
+    }
+
+    &-socials {
+      @include flex-align-center;
+      margin-bottom: 14px;
+      gap: 32px;
+
+      @include mobile {
+        gap: 25px 32px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & svg {
+        cursor: pointer;
+
+        path:first-child {
+          fill: var(--neutral-color-100);
+          opacity: 0.1;
+          transition: opacity var(--transition);
+        }
+
+        & path:not(:first-child) {
+          fill: var(--neutral-color-100);
+        }
+
+        &:hover {
+          path:first-child {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      &-link {
+        position: relative;
+        margin-left: -8px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 162%;
+        color: var(--neutral-color-100);
+        background-color: var(--neutral-color-10);
+
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: var(--neutral-color-100);
+          opacity: 0;
+          visibility: hidden;
+          transition:
+            opacity var(--transition),
+            visibility var(--transition);
+        }
+        &:hover {
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    &-written {
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+
+    &-name {
+      font-weight: 600;
+      line-height: 131%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-profession {
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-150);
+    }
+
+    &-descr {
+      font-weight: 400;
+      line-height: 178%;
+      color: var(--neutral-color-100);
+    }
+
+    &-written,
+    &-name,
+    &-profession {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.hero {
+  padding: 80px 0 48px;
+
+  @include mobile {
+    padding: 60px 0 40px;
+  }
+
+  @include small-mobile {
+    padding-top: 40px;
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: 965px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+}
