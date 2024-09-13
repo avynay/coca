@@ -154,3 +154,15 @@ export const useAboutTeamSlider = () => {
     },
   });
 };
+
+export const useReviewNewsSlider = () => {
+  new Swiper('.news__slider', {
+    modules: [Navigation],
+    spaceBetween: 32,
+    slidesPerView: 'auto',
+    navigation: {
+      nextEl: '.news__btn--next',
+      prevEl: '.news__btn--prev',
+    },
+  });
+};

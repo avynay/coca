@@ -9,6 +9,23 @@
     padding: 45px 0 0;
   }
 
+  &-decor::before {
+    top: 1200px;
+    left: 51px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &-decor::after {
+    bottom: -850px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__title {
     margin-bottom: 118px;
     max-width: 959px;
