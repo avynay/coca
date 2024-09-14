@@ -155,6 +155,33 @@ export const useAboutTeamSlider = () => {
   });
 };
 
+export const useReviewviewHeroSlider = () => {
+  new Swiper('.hero__slider', {
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 16,
+    initialSlide: 1,
+    breakpoints: {
+      1201: {
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        initialSlide: 0,
+        spaceBetween: 32,
+      },
+      993: {
+        slidesPerView: 'auto',
+        initialSlide: 1,
+        spaceBetween: 32,
+        centeredSlides: true,
+      },
+      577: {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+      },
+    },
+  });
+};
+
 export const useReviewNewsSlider = () => {
   new Swiper('.news__slider', {
     modules: [Navigation],
